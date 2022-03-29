@@ -65,7 +65,7 @@ const SignIn = () => {
 					<br />
 					<p>
 						<strong>
-							Atenção esse site é fictício, não é o site do Banco Inter oficial,{' '}
+							Atenção esse site é fictício, não é o site oficial do Banco Inter!{' '}
 							desenvolvido por:
 						</strong>{' '}
 						<a
