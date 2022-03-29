@@ -29,7 +29,7 @@ const SignIn = () => {
 			<HeaderSignIn>
 				<HeaderSignInImg>
 					<a
-						href='https://gilbertoaleite-portfolio.netlify.app/'
+						href='http://gilbertoaleite-portfolio.netlify.app/'
 						target='_blank'
 						rel='noopener noreferrer'
 						title='Visite o meu Portfólio'
@@ -69,7 +69,7 @@ const SignIn = () => {
 							desenvolvido por:
 						</strong>{' '}
 						<a
-							href='https://gilbertoaleite-portfolio.netlify.app/'
+							href='http://gilbertoaleite-portfolio.netlify.app/'
 							target='_blank'
 							rel='noopener noreferrer'
 							title='Visite o meu Portfólio'
