@@ -1,3 +1,5 @@
+/** @format */
+
 import {
 	Wrapper,
 	InputContainer,
@@ -5,7 +7,6 @@ import {
 	HeaderSignIn,
 	HeaderSignInImg,
 	HeaderSignInImg2,
-	
 } from './styles';
 import { useNavigate, Link } from 'react-router-dom';
 
@@ -18,57 +19,71 @@ import Input from '../../components/Input';
 import Button from '../../components/Button';
 
 const SignIn = () => {
-   const navigate = useNavigate();
+	const navigate = useNavigate();
 
-   const handleToSingIn = () => {
-      navigate('/dashboard')
-   }
-   return (
-			<Wrapper>
-				<HeaderSignIn>
-					<HeaderSignInImg>
+	const handleToSingIn = () => {
+		navigate('/dashboard');
+	};
+	return (
+		<Wrapper>
+			<HeaderSignIn>
+				<HeaderSignInImg>
+					<a
+						href='http://https://gilbertoaleite-portfolio.netlify.app/'
+						target='_blank'
+						rel='noopener noreferrer'
+						title='Visite o meu Portfólio'
+					>
+						<img
+							src={logoInterWhite}
+							width={242}
+							height={210}
+							alt='logo inter'
+						/>
+					</a>
+				</HeaderSignInImg>
+				<p>INTERNET.BANKING</p>
+				<HeaderSignInImg2>
+					<img src={contaDigital} width={230} height={50} alt='logo inter' />
+				</HeaderSignInImg2>
+			</HeaderSignIn>
+
+			<Card width='403px' height='auto'>
+				{/* <img src={logoInter} width={172} height={61} alt='logo inter' /> */}
+				<InputContainer>
+					<Input placeholder='EMAIL' />
+					<Input placeholder='SENHA' type='password' />
+				</InputContainer>
+
+				<ButtonContainer>
+					<Button type='button' onClick={handleToSingIn}>
+						AVANÇAR
+					</Button>
+					<p>
+						Ainda não tem cadastro? <Link to='/signup'>Cadastre-se Já</Link>
+					</p>
+					<br />
+					<p>
+						<strong>
+							Atenção esse site é fictício, não é o site do Banco Inter oficial,{' '}
+							desenvolvido por:
+						</strong>{' '}
 						<a
 							href='http://https://gilbertoaleite-portfolio.netlify.app/'
 							target='_blank'
 							rel='noopener noreferrer'
 							title='Visite o meu Portfólio'
 						>
-							<img
-								src={logoInterWhite}
-								width={242}
-								height={210}
-								alt='logo inter'
-							/>
+							Gilberto A Leite
 						</a>
-					</HeaderSignInImg>
-					<p>INTERNET.BANKING</p>
-					<HeaderSignInImg2>
-						<img src={contaDigital} width={230} height={50} alt='logo inter' />
-					</HeaderSignInImg2>
-				</HeaderSignIn>
-
-				<Card width='403px' height='auto'>
-					{/* <img src={logoInter} width={172} height={61} alt='logo inter' /> */}
-					<InputContainer>
-						<Input placeholder='EMAIL' />
-						<Input placeholder='SENHA' type='password' />
-					</InputContainer>
-
-					<ButtonContainer>
-						<Button type='button' onClick={handleToSingIn}>
-							AVANÇAR
-						</Button>
-						<p>
-							Ainda não tem cadastro? <Link to='/signup'>Cadastre-se Já</Link>
-						</p>
-					</ButtonContainer>
-					{/* <Banner>
+					</p>
+				</ButtonContainer>
+				{/* <Banner>
 						<img src={banner} width={350} height={310} alt='logo inter' />
 					</Banner> */}
-				</Card>
-			</Wrapper>
-		);
-				
-}
+			</Card>
+		</Wrapper>
+	);
+};
 
 export default SignIn;
