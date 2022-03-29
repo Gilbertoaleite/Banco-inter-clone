@@ -15,7 +15,7 @@ const Header = () => {
     return (
 			<HeaderContainer>
 				<HeaderWrapper>
-					<a href='http://https://gilbertoaleite-portfolio.netlify.app/'
+					<a href='https://gilbertoaleite-portfolio.netlify.app/'
 						target='_blank'
 						rel='noopener noreferrer'
 						title='Visite o meu Portfólio'
