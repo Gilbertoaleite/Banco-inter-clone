@@ -6,7 +6,6 @@ import {
 	ButtonContainer,
 	HeaderSignIn,
 	HeaderSignInImg,
-	HeaderSignInImg2,
 } from './styles';
 import { useNavigate, Link } from 'react-router-dom';
 
@@ -27,36 +26,60 @@ const SignIn = () => {
 	return (
 		<Wrapper>
 			<HeaderSignIn>
+				{/* AVISO DE SITE NÃO OFICIAL */ }
+				<div style={ {
+					background: '#ff9800',
+					color: '#fff',
+					padding: '8px 12px',
+					textAlign: 'center',
+					fontWeight: 'bold',
+					fontSize: '1rem',
+					letterSpacing: '0.5px',
+					borderRadius: '8px',
+					marginBottom: '8px',
+					width: '100%',
+					maxWidth: 600,
+					alignSelf: 'center'
+				} }>
+					Atenção: Este site é um clone para fins educacionais e <u>não</u> é o site oficial do Banco Inter.
+				</div>
 				<HeaderSignInImg>
 					<a
 						href='http://gilbertoaleite-portfolio.netlify.app/'
 						target='_blank'
 						rel='noopener noreferrer'
 						title='Visite o meu Portfólio'
+						style={ { display: 'flex', alignItems: 'center', gap: 16 } }
 					>
-						<img
-							src={logoInterWhite}
-							width={242}
-							height={210}
-							alt='logo inter'
-						/>
+						<span style={ { display: 'flex', alignItems: 'center', gap: 16 } }>
+							<img
+								src={ logoInterWhite }
+								width={ 120 }
+								height={ 40 }
+								alt='logo inter'
+								style={ { maxWidth: 120, height: 'auto' } }
+							/>
+							<span style={ { fontWeight: 700, color: '#fff', fontSize: 18, letterSpacing: 1, marginLeft: 8 } }>
+								INTERNET.BANKING
+							</span>
+							<img
+								src={ contaDigital }
+								width={ 100 }
+								height={ 30 }
+								alt='logo inter'
+								style={ { maxWidth: 100, height: 'auto', marginLeft: 16 } }
+							/>
+						</span>
 					</a>
 				</HeaderSignInImg>
-				<p>INTERNET.BANKING</p>
-				<HeaderSignInImg2>
-					<img src={contaDigital} width={230} height={50} alt='logo inter' />
-				</HeaderSignInImg2>
 			</HeaderSignIn>
-
 			<Card width='403px' height='auto'>
-				{/* <img src={logoInter} width={172} height={61} alt='logo inter' /> */}
 				<InputContainer>
 					<Input placeholder='EMAIL' />
 					<Input placeholder='SENHA' type='password' />
 				</InputContainer>
-
 				<ButtonContainer>
-					<Button type='button' onClick={handleToSingIn}>
+					<Button type='button' onClick={ handleToSingIn }>
 						AVANÇAR
 					</Button>
 					<p>
@@ -65,9 +88,9 @@ const SignIn = () => {
 					<br />
 					<p>
 						<strong>
-							Atenção esse site é fictício, não é o site oficial do Banco Inter!{' '}
+							Atenção esse site é fictício, não é o site oficial do Banco Inter!{ ' ' }
 							desenvolvido por:
-						</strong>{' '}
+						</strong>{ ' ' }
 						<a
 							href='http://gilbertoaleite-portfolio.netlify.app/'
 							target='_blank'
@@ -79,8 +102,8 @@ const SignIn = () => {
 					</p>
 				</ButtonContainer>
 				{/* <Banner>
-						<img src={banner} width={350} height={310} alt='logo inter' />
-					</Banner> */}
+					<img src={banner} width={350} height={310} alt='logo inter' />
+				</Banner> */}
 			</Card>
 		</Wrapper>
 	);

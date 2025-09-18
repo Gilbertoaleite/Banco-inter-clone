@@ -1,4 +1,4 @@
-import {Wrapper, Background, InputContainer, ButtonContainer} from './styles';
+import { Wrapper, Background, InputContainer, ButtonContainer } from './styles';
 import { useNavigate, Link } from 'react-router-dom';
 
 import background from '../../assets/images/background-login.jpg';
@@ -16,20 +16,24 @@ const SignUp = () => {
     }
     return (
         <Wrapper>
-            <Background image={background}/>
+            {/* AVISO DE SITE NÃO OFICIAL */ }
+            <div style={ { background: '#ff9800', color: '#fff', padding: '12px', textAlign: 'center', fontWeight: 'bold', fontSize: '1.1rem', letterSpacing: '0.5px' } }>
+                Atenção: Este site é um clone para fins educacionais e <u>não</u> é o site oficial do Banco Inter.
+            </div>
+            <Background image={ background } />
             <Card width="403px" height="auto">
-                <img src={logoInter} width={172} height={61} alt="logo inter" />
+                <img src={ logoInter } width={ 172 } height={ 61 } alt="logo inter" />
 
                 <InputContainer>
-                    <Input placeholder="NOME"/>
-                    <Input placeholder="SOBRENOME"/>
-                    <Input placeholder="EMAIL"/>
-                    <Input placeholder="SENHA" type="password"/>
-                    <Input placeholder="CONFIRMAR SENHA" type="password"/>
+                    <Input placeholder="NOME" />
+                    <Input placeholder="SOBRENOME" />
+                    <Input placeholder="EMAIL" />
+                    <Input placeholder="SENHA" type="password" />
+                    <Input placeholder="CONFIRMAR SENHA" type="password" />
                 </InputContainer>
 
                 <ButtonContainer>
-                    <Button type="button" onClick={handleToSingIn}>CADASTRE-SE</Button>
+                    <Button type="button" onClick={ handleToSingIn }>CADASTRE-SE</Button>
                     <p>Já tem uma conta? <Link to="/signin">Entre Já</Link></p>
                 </ButtonContainer>
             </Card>

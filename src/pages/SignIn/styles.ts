@@ -1,96 +1,67 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.main`
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: #fafbfc;
+`;
+
+export const HeaderSignIn = styled.header`
     width: 100%;
-    height: 100vh;
-
+    min-height: 70px;
+    background: ${({ theme }) => theme.colors.primary};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 0 0 0;
     position: relative;
+    box-sizing: border-box;
+`;
 
+export const HeaderSignInImg = styled.div`
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-`
-
-// export const Background = styled.div<{color: any}>`
-//     position: absolute;
-//     width: 100%;
-//     top: 0;
-//     left: 0;
-//     height: 15vh;
-//     background-color: ${({theme})=> theme.colors.primary};
-//     background-size: contain;
-//     z-index: 1;
-// `
-
-export const HeaderSignIn = styled.head`
-	width: 100%;
-	height: 90px;
-
-	background-color: ${({ theme }) => theme.colors.primary};
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: absolute;
-    width: 100%;
-	top: 0;
-	left: 0;
-	height: 20vh;
-
-    p{
-        display: inline-block;
-        margin: 30px 550px 0 0;
-        padding: 4px 6px 4px 6px;
-        
-        color: #ffffff;
-        border:1px solid #ffffff ;
-
-    }
-`;
-export const HeaderSignInImg = styled.div`
-	width: 100%;
-	height: 90px;
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
-    
-`;
-export const HeaderSignInImg2 = styled.div`
-	display: flex;
-	margin: 0 90px 5px 60px;
-	align-items: center;
-
-	
+    margin-bottom: 8px;
 `;
 
 export const InputContainer = styled.div`
-margin-top: 67px;
-width: 90%;
-flex: 1;
-`
+    margin-top: 48px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+`;
 
 export const ButtonContainer = styled.div`
-display: block;
-width: 90%;
-margin: 0 auto;
-
-p{
-    font-size: 0.75rem;
-    font-weight: 400;
-    color: ${({theme})=> theme.colors.secondary};
-
-    a {
-    font-size: 1rem;
-    font-weight: 700;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    p {
+        font-size: 0.85rem;
+        color: ${({ theme }) => theme.colors.secondary};
+        margin: 0;
+        a {
+            font-size: 1rem;
+            font-weight: 700;
+        }
     }
-}
-`
+`;
+
 export const Banner = styled.div`
-display:flex;
-flex-direction: column;
-wrap: wrap;
-width: 0;
-margin: 15px;
-
-
-`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 15px 0;
+`;
